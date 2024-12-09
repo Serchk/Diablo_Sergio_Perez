@@ -10,6 +10,7 @@ public class NPC : MonoBehaviour
     [SerializeField] private Texture2D iconoInteracción;
     [SerializeField] private Texture2D iconoPorDefecto;
 
+    [SerializeField] private DialogaSO miDialogo;
     [SerializeField] private float duracionRotacion;
     // Start is called before the first frame update
     void Start()
@@ -24,8 +25,11 @@ public class NPC : MonoBehaviour
     }
     public void Interactuar(Transform interactuador)
     {
-        transform.DOLookAt(interactuador.position, duracionRotacion, AxisConstraint.Y);
-        Debug.Log("Hola viajero.");
+        transform.DOLookAt(interactuador.position, duracionRotacion, AxisConstraint.Y).OnComplete(IniciarInteraccion);
+    }
+    private void IniciarInteraccion()
+    {
+        SistemaDialogo.sistema.IniciarDialogo(miDialogo);
     }
 
     private void OnMouseEnter()
