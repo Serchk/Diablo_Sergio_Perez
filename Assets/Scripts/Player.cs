@@ -19,8 +19,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movimiento();
-        ComprobarInteraccon();
+        if (Time.timeScale == 1)
+        {
+            Movimiento();
+            ComprobarInteraccon();
+        }
+        
     }
 
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SistemaDialogo : MonoBehaviour
@@ -9,6 +10,15 @@ public class SistemaDialogo : MonoBehaviour
        //2. Es accesible desde cualquier punto del programa.
 
     public static SistemaDialogo sistema;
+
+    [SerializeField] private GameObject marcoDialogo;
+
+    [SerializeField] private TMP_Text textoDialogo;
+
+    private bool escribiendo;
+    private int indiceFraseActual = 0;
+
+    private DialogaSO dialogoActual;
 
     
     // Start is called before the first frame update
@@ -29,7 +39,58 @@ public class SistemaDialogo : MonoBehaviour
 
     public void IniciarDialogo(DialogaSO dialogo)
     {
+        Time.timeScale = 0;
+        dialogoActual = dialogo;
+        marcoDialogo.SetActive(true);
+        StartCoroutine(EscribirFrase());
+
+    }
+    IEnumerator EscribirFrase()
+    {
+        escribiendo = true;
+        textoDialogo.text = string.Empty;
+        char[] fraseEnLetras = dialogoActual.frase[indiceFraseActual].ToCharArray();
+
+        foreach (char letra in fraseEnLetras)
+        {
+            textoDialogo.text += letra;
+            yield return new WaitForSecondsRealtime(dialogoActual.tiempoEntreLetras);
+        }
+        escribiendo = false;
+    }
+    public void CompletarFrase()
+    {
+        textoDialogo.text = dialogoActual.frase[indiceFraseActual];
+        StopAllCoroutines();
+        escribiendo = false;
+    }
+    public void SiguienteFrase()
+    {
+        if (!escribiendo)
+        {
+            indiceFraseActual++;
+            if (indiceFraseActual < dialogoActual.frase.Length)
+            {
+                StartCoroutine(EscribirFrase());
+            }
+            else
+            {
+                FinalizarDialogo();
+            }
+        }
+        else
+        {
+            CompletarFrase();
+        }
+    }
+    private void FinalizarDialogo()
+    {
         
+        marcoDialogo.SetActive(false);
+        indiceFraseActual = 0;
+        escribiendo = false;
+        dialogoActual = null;
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
