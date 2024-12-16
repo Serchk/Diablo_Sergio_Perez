@@ -12,6 +12,7 @@ public class NPC : MonoBehaviour
 
     [SerializeField] private DialogaSO miDialogo;
     [SerializeField] private float duracionRotacion;
+    [SerializeField] private Transform cameraNPC;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,7 @@ public class NPC : MonoBehaviour
     }
     private void IniciarInteraccion()
     {
-        SistemaDialogo.sistema.IniciarDialogo(miDialogo);
+        SistemaDialogo.sistema.IniciarDialogo(miDialogo, cameraNPC);
     }
 
     private void OnMouseEnter()

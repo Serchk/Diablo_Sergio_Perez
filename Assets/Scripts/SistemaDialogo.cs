@@ -15,6 +15,8 @@ public class SistemaDialogo : MonoBehaviour
 
     [SerializeField] private TMP_Text textoDialogo;
 
+    [SerializeField] private Transform npcCamera;
+
     private bool escribiendo;
     private int indiceFraseActual = 0;
 
@@ -37,11 +39,12 @@ public class SistemaDialogo : MonoBehaviour
         }
     }
 
-    public void IniciarDialogo(DialogaSO dialogo)
+    public void IniciarDialogo(DialogaSO dialogo, Transform cameraPoint)
     {
         Time.timeScale = 0;
         dialogoActual = dialogo;
         marcoDialogo.SetActive(true);
+        npcCamera.SetPositionAndRotation(cameraPoint.position, cameraPoint.rotation);
         StartCoroutine(EscribirFrase());
 
     }
