@@ -1236,7 +1236,7 @@ Transform:
   m_GameObject: {fileID: 81914617}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.81, y: 0, z: 1.85}
+  m_LocalPosition: {x: -2.83, y: 0, z: 1.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2030,7 +2030,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2064018857}
+    m_TransformParent: {fileID: 1248545575}
     m_Modifications:
     - target: {fileID: 4035423654360084533, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
         type: 3}
@@ -2086,6 +2086,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Suelo (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965219581322399441, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8965219581322399441, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
         type: 3}
@@ -2374,7 +2379,7 @@ Transform:
   m_GameObject: {fileID: 150361630}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.52, y: 1, z: 22.94}
+  m_LocalPosition: {x: 42.31, y: 1, z: 20.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4632,7 +4637,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.1159169, y: 0.8804763, z: -0.27984816, w: 0.3647052}
-  m_LocalPosition: {x: -9.48, y: 41, z: 62.940002}
+  m_LocalPosition: {x: 2.3100014, y: 41, z: 60.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7614,6 +7619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 599163345}
   - component: {fileID: 599163344}
+  - component: {fileID: 599163346}
   m_Layer: 0
   m_Name: Escenario
   m_TagString: Untagged
@@ -7672,6 +7678,37 @@ Transform:
   - {fileID: 1627203268}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &599163346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599163343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: -1372625422
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: a44198db9e7ab7e4483ee637214c4855, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &602626685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8389,7 +8426,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2064018857}
+    m_TransformParent: {fileID: 1248545575}
     m_Modifications:
     - target: {fileID: 4035423654360084533, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
         type: 3}
@@ -8445,6 +8482,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Suelo (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965219581322399441, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8965219581322399441, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
         type: 3}
@@ -9239,7 +9281,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787656216}
   m_Enabled: 1
-  m_AgentTypeID: 0
+  m_AgentTypeID: -1372625422
   m_Radius: 0.5
   m_Speed: 3.5
   m_Acceleration: 8
@@ -10057,7 +10099,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2064018857}
+    m_TransformParent: {fileID: 1248545575}
     m_Modifications:
     - target: {fileID: 4035423654360084533, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
         type: 3}
@@ -10113,6 +10155,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Suelo (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965219581322399441, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8965219581322399441, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
         type: 3}
@@ -10839,7 +10886,7 @@ Transform:
   m_GameObject: {fileID: 945086864}
   serializedVersion: 2
   m_LocalRotation: {x: 0.1159169, y: 0.8804763, z: -0.27984816, w: 0.3647052}
-  m_LocalPosition: {x: -9.48, y: 41, z: 62.940002}
+  m_LocalPosition: {x: 2.3100014, y: 41, z: 60.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12208,7 +12255,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2064018857}
+    m_TransformParent: {fileID: 1248545575}
     m_Modifications:
     - target: {fileID: 4035423654360084533, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
         type: 3}
@@ -12264,6 +12311,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Suelo (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965219581322399441, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8965219581322399441, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
         type: 3}
@@ -12761,7 +12813,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2064018857}
+    m_TransformParent: {fileID: 1248545575}
     m_Modifications:
     - target: {fileID: 4035423654360084533, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
         type: 3}
@@ -12817,6 +12869,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Suelo (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965219581322399441, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8965219581322399441, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
         type: 3}
@@ -13630,6 +13687,44 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1242427794}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1248545574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1248545575}
+  m_Layer: 6
+  m_Name: SuelosCombate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1248545575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248545574}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 144955395}
+  - {fileID: 851515948}
+  - {fileID: 1183766088}
+  - {fileID: 1117324050}
+  - {fileID: 1711006846}
+  - {fileID: 1606774723}
+  - {fileID: 681940684}
+  m_Father: {fileID: 2064018857}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1250630555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16250,7 +16345,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2064018857}
+    m_TransformParent: {fileID: 1248545575}
     m_Modifications:
     - target: {fileID: 4035423654360084533, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
         type: 3}
@@ -16306,6 +16401,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Suelo (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965219581322399441, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8965219581322399441, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
         type: 3}
@@ -17553,7 +17653,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2064018857}
+    m_TransformParent: {fileID: 1248545575}
     m_Modifications:
     - target: {fileID: 4035423654360084533, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
         type: 3}
@@ -17609,6 +17709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Suelo (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965219581322399441, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8965219581322399441, guid: 02bc2ff719a433a47ba5c4ca214afd5c,
         type: 3}
@@ -18696,6 +18801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   main: {fileID: 787656220}
   agent: {fileID: 787656217}
+  velocidadCombate: 3.5
 --- !u!1001 &1817645777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22083,13 +22189,7 @@ Transform:
   - {fileID: 135157070}
   - {fileID: 849613169}
   - {fileID: 44618637}
-  - {fileID: 144955395}
-  - {fileID: 851515948}
-  - {fileID: 1183766088}
-  - {fileID: 1117324050}
-  - {fileID: 1711006846}
-  - {fileID: 1606774723}
-  - {fileID: 681940684}
+  - {fileID: 1248545575}
   - {fileID: 360072830}
   - {fileID: 249990228}
   - {fileID: 290249591}
@@ -22979,6 +23079,7 @@ MonoBehaviour:
   main: {fileID: 787656220}
   ruta: {fileID: 161079721}
   agent: {fileID: 787656217}
+  velocidadPatrulla: 2
 --- !u!135 &2138560795
 SphereCollider:
   m_ObjectHideFlags: 0

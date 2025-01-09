@@ -11,6 +11,7 @@ public class SistemaCombate : MonoBehaviour
 
     [SerializeField] private Enemigo main;
     [SerializeField] private NavMeshAgent agent;
+    [SerializeField] private float velocidadCombate;
     private void Awake()
     {
         main.Combate = this;
@@ -21,7 +22,10 @@ public class SistemaCombate : MonoBehaviour
     {
         
     }
-
+    private void OnEnable()
+    {
+        agent.speed = velocidadCombate;
+    }
     // Update is called once per frame
     void Update()
     {
