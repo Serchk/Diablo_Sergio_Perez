@@ -2276,7 +2276,7 @@ GameObject:
   - component: {fileID: 150361631}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2374,7 +2374,7 @@ Transform:
   m_GameObject: {fileID: 150361630}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32, y: 1, z: 22}
+  m_LocalPosition: {x: 30.52, y: 1, z: 22.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4632,7 +4632,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.1159169, y: 0.8804763, z: -0.27984816, w: 0.3647052}
-  m_LocalPosition: {x: -8, y: 41, z: 62}
+  m_LocalPosition: {x: -9.48, y: 41, z: 62.940002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9221,6 +9221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 787656219}
+  - component: {fileID: 787656220}
   - component: {fileID: 787656218}
   - component: {fileID: 787656217}
   m_Layer: 0
@@ -9267,7 +9268,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -9291,9 +9292,22 @@ Transform:
   - {fileID: 665191698124080335}
   - {fileID: 1963234825}
   - {fileID: 2138560793}
+  - {fileID: 1816017799}
   - {fileID: 161079721}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &787656220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787656216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e92165c257ceb48a67f0127552d82a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &789346927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10825,7 +10839,7 @@ Transform:
   m_GameObject: {fileID: 945086864}
   serializedVersion: 2
   m_LocalRotation: {x: 0.1159169, y: 0.8804763, z: -0.27984816, w: 0.3647052}
-  m_LocalPosition: {x: -8, y: 41, z: 62}
+  m_LocalPosition: {x: -9.48, y: 41, z: 62.940002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18636,6 +18650,52 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1812037905}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1816017798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1816017799}
+  - component: {fileID: 1816017800}
+  m_Layer: 0
+  m_Name: SistemaCombate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1816017799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816017798}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 787656219}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1816017800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816017798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2794a391dbb4060489c9d322fa6603ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 787656220}
+  agent: {fileID: 787656217}
 --- !u!1001 &1817645777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22069,7 +22129,7 @@ Transform:
   m_GameObject: {fileID: 2064757026}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.31, y: 0, z: -5.51}
+  m_LocalPosition: {x: 1.51, y: 0, z: -3.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22881,6 +22941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2138560793}
   - component: {fileID: 2138560794}
+  - component: {fileID: 2138560795}
   m_Layer: 0
   m_Name: SistemaPatrulla
   m_TagString: Untagged
@@ -22915,8 +22976,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d099e9b724c5044dbe43ebf43d2e1d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main: {fileID: 787656220}
   ruta: {fileID: 161079721}
   agent: {fileID: 787656217}
+--- !u!135 &2138560795
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138560792}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 8
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2139386860
 PrefabInstance:
   m_ObjectHideFlags: 0
