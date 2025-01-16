@@ -7698,7 +7698,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   m_UseGeometry: 0
-  m_DefaultArea: 0
+  m_DefaultArea: 4
   m_GenerateLinks: 0
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
@@ -13701,7 +13701,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1248545575
 Transform:
@@ -18802,6 +18802,8 @@ MonoBehaviour:
   main: {fileID: 787656220}
   agent: {fileID: 787656217}
   velocidadCombate: 3.5
+  distanciaAtaque: 0
+  anim: {fileID: 665191698124080336}
 --- !u!1001 &1817645777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22097,6 +22099,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1248545575}
   - {fileID: 1274556212472599261}
   - {fileID: 350784225}
   - {fileID: 198174266}
@@ -22189,7 +22192,6 @@ Transform:
   - {fileID: 135157070}
   - {fileID: 849613169}
   - {fileID: 44618637}
-  - {fileID: 1248545575}
   - {fileID: 360072830}
   - {fileID: 249990228}
   - {fileID: 290249591}
@@ -23071,7 +23073,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138560792}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d099e9b724c5044dbe43ebf43d2e1d8, type: 3}
   m_Name: 

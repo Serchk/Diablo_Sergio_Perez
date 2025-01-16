@@ -28,11 +28,13 @@ public class SistemaPatrulla : MonoBehaviour
     }
     void Start()
     {
-        StartCoroutine(PatrullarYEsperar());
+        
     }
     private void OnEnable()
     {
+        agent.stoppingDistance = 0;
         agent.speed = velocidadPatrulla;
+        StartCoroutine(PatrullarYEsperar());
     }
 
     private IEnumerator PatrullarYEsperar()

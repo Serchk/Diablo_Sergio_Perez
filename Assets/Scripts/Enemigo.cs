@@ -20,10 +20,16 @@ public class Enemigo : MonoBehaviour
         this.target = target;
     }
 
+    internal void ActivarPatrulla()
+    {
+        combate.enabled = false;
+        patrulla.enabled = true;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        patrulla.enabled = true;
     }
 
     // Update is called once per frame
