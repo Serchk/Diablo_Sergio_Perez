@@ -14,6 +14,7 @@ public class SistemaCombate : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private float velocidadCombate;
     [SerializeField] private float distanciaAtaque;
+    [SerializeField] private float danhoAtaque;
     [SerializeField] private Animator anim;
     private void Awake()
     {
@@ -62,12 +63,12 @@ public class SistemaCombate : MonoBehaviour
     #region
     private void Atacar()
     {
-
+        //Hacer daño al player, overlap
+        main.Target.GetComponent<Player>().HacerDanho(danhoAtaque);
     }
     private void FinAnimacionAtaque()
     {
-
+        anim.SetBool("Attack", false);
     }
     #endregion
-
 }

@@ -21,10 +21,9 @@ public class Player : MonoBehaviour
     {
         if (Time.timeScale == 1)
         {
-            Movimiento();
-            ComprobarInteraccon();
+            Movimiento();            
         }
-        
+        ComprobarInteraccon();
     }
 
 
@@ -41,6 +40,17 @@ public class Player : MonoBehaviour
             }
         }
     }
+    //private void Interacciones()
+    //{
+    //    if(Input.GetKeyDown(KeyCode.E))
+    //    {
+    //        Collider coll = Physics.OverlapSphere();
+    //        if(coll.TryGetComponent(out IInteractuable interactuable))
+    //        {
+    //            interactuable.Interactuar():
+    //        }
+    //    }
+    //}
     private void ComprobarInteraccon()
     {
         if (ultimoClick != null && ultimoClick.TryGetComponent(out NPC npc))
@@ -49,7 +59,7 @@ public class Player : MonoBehaviour
 
             if(!agent.pathPending && agent.remainingDistance <agent.stoppingDistance)
             {
-                npc.Interactuar(transform);
+                npc.Interact(transform);
 
                 ultimoClick = null;
             }
@@ -58,5 +68,10 @@ public class Player : MonoBehaviour
         {
             agent.stoppingDistance = 0;
         }
+    }
+
+    public void HacerDanho(float danhoAtaque)
+    {
+        Debug.Log("Me hacen pupa: " + danhoAtaque);
     }
 }

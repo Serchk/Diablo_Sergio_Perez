@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC : MonoBehaviour
+public class NPC : MonoBehaviour, IInteractuable
 {
     private Outline outline;
     [SerializeField] private Texture2D iconoInteracción;
@@ -24,7 +24,7 @@ public class NPC : MonoBehaviour
     {
         
     }
-    public void Interactuar(Transform interactuador)
+    public void Interact(Transform interactuador)
     {
         transform.DOLookAt(interactuador.position, duracionRotacion, AxisConstraint.Y).OnComplete(IniciarInteraccion);
     }
@@ -42,5 +42,10 @@ public class NPC : MonoBehaviour
     {
         Cursor.SetCursor(iconoPorDefecto, Vector2.zero, CursorMode.Auto);
         outline.enabled = false;
+    }
+
+    public void Interactuar()
+    {
+        throw new NotImplementedException();
     }
 }
