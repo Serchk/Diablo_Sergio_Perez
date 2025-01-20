@@ -65,6 +65,7 @@ public class SistemaPatrulla : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            
             StopAllCoroutines();
             main.ActivarCombate(other.transform);
         }

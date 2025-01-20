@@ -15,12 +15,13 @@ public class Enemigo : MonoBehaviour
 
     public void ActivarCombate(Transform target)
     {
+        Debug.Log("asssssssssssssss");
         patrulla.enabled = false;
         combate.enabled = true;
         this.target = target;
     }
 
-    internal void ActivarPatrulla()
+    public void ActivarPatrulla()
     {
         combate.enabled = false;
         patrulla.enabled = true;
