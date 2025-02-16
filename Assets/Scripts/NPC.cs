@@ -24,6 +24,10 @@ public class NPC : MonoBehaviour, IInteractuable
     {
         
     }
+    public void Interactuar(Transform interactor)
+    {
+        transform.DOLookAt(interactor.position, duracionRotacion, AxisConstraint.Y).OnComplete(IniciarInteraccion);
+    }
     private void IniciarInteraccion()
     {
         SistemaDialogo.sD.IniciarDialogo(miDialogo, cameraNPC);
@@ -40,8 +44,5 @@ public class NPC : MonoBehaviour, IInteractuable
         outline.enabled = false;
     }
 
-    void IInteractuable.Interactuar(Transform interactuador)
-    {
-        transform.DOLookAt(interactuador.position, duracionRotacion, AxisConstraint.Y).OnComplete(IniciarInteraccion);
-    }
+   
 }

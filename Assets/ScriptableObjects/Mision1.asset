@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383d58f12faeda1459b62ef5f9defdf5, type: 3}
   m_Name: Mision1
   m_EditorClassIdentifier: 
-  ordenInicial: 
-  ordenFinal: 
+  ordenInicial: "Encuentra las dos setas para el guardi\xE1n"
+  ordenFinal: "Vuelve conel guardi\xE1n"
   tieneRepeticion: 0
-  totalRepeticiones: 0
+  totalRepeticiones: 2
   indiceMision: 0
   repeticionActual: 0

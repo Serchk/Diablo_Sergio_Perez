@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
 
             if(!agent.pathPending && agent.remainingDistance <agent.stoppingDistance)
             {
-                npc.Interact(transform);
+                npc.Interactuar(transform);
 
                 ultimoClick = null;
             }

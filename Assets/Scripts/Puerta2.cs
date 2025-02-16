@@ -25,9 +25,4 @@ public class Puerta2 : MonoBehaviour
         Application.Quit();
         Debug.Log("Saliendo...");
     }
-
-    //public void AbsorberFlor()
-    //{
-    //    anim.SetBool("Plantado", false);
-    //}
 }

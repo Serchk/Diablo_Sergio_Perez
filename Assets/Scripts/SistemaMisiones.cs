@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SistemaMisiones : MonoBehaviour
@@ -15,10 +16,10 @@ public class SistemaMisiones : MonoBehaviour
     {
         //me suscribo al evento y lo vinculo con el metodo.
         eventManager.OnNuevaMision += EncenderToggleMision;
-        //eventManager.OnActualizarMision += ActualizarToggleMision;
-        //eventManager.OnTerminarMision += TerminarToggleMision;
-    }
+        eventManager.OnActualizarMision += ActualizarToggleMision;
 
+        //ev/*entManager.OnTerminarMision += TerminarToggleMision;*/
+    }
     private void EncenderToggleMision(MisionSo mision)
     {
         togglesMision[mision.indiceMision].TextoMision.text = mision.ordenInicial;
@@ -31,35 +32,18 @@ public class SistemaMisiones : MonoBehaviour
 
         togglesMision[mision.indiceMision].gameObject.SetActive(true);
     }
+   
+    private void ActualizarToggleMision(MisionSo mision)
+    {
+        togglesMision[mision.indiceMision].TextoMision.text = mision.ordenInicial;
+        togglesMision[mision.indiceMision].TextoMision.text += "(" + mision.repeticionActual + "/" + mision.totalRepeticiones + ")";
+    }
+    private void TerminarToggleMision(MisionSo mision)
+    {
+        togglesMision[mision.indiceMision].ToggleVisual.isOn = true;
+        togglesMision[mision.indiceMision].TextoMision.text = mision.ordenFinal;
+    }
 
 
-
-    //private void EncenderToggleMision(MisionSO mision)
-    //{
-    //    //alineamos el texto con el contenido de la mision
-    //    togglesMision[mision.indiceMision].TextoMision.text = mision.ordenInicial;
-
-    //    //Y si tiene repeticion...
-    //    if (mision.tieneRepeticion)
-    //    {
-    //        togglesMision[mision.indiceMision].TextoMision.text += "(" + mision.repeticionActual + "/" + mision.totalRepeticiones + ")";
-
-    //    }
-
-    //    togglesMision[mision.indiceMision].gameObject.SetActive(true);
-
-    //    //togglesMision[?].ToggleVisual.isOn = false;*/
-    //}
-    //private void ActualizarToggleMision(MisionSO mision)
-    //{
-    //    togglesMision[mision.indiceMision].TextoMision.text = mision.ordenInicial;
-    //    togglesMision[mision.indiceMision].TextoMision.text += "(" + mision.repeticionActual + "/" + mision.totalRepeticiones + ")";
-    //}
-    //private void TerminarToggleMision(MisionSO mision)
-    //{
-    //    //togglesMision[mision.indiceMision].ToggleVisual.isOn = true;//al terminar la mision "chekeamos" el toggle
-    //    togglesMision[mision.indiceMision].TextoMision.text = mision.ordenFinal; // ponemos el texto de victoria
-
-    //}
 
 }

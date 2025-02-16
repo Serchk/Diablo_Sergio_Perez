@@ -25,10 +25,4 @@ public class Puerta1 : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-
-    //public void AbsorberFlor()
-    //{
-    //    anim.SetBool("Plantado", false);
-    //}
-
 }
