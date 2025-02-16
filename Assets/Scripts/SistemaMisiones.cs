@@ -19,10 +19,20 @@ public class SistemaMisiones : MonoBehaviour
         //eventManager.OnTerminarMision += TerminarToggleMision;
     }
 
-    private void EncenderToggleMision()
+    private void EncenderToggleMision(MisionSo mision)
     {
-        throw new System.NotImplementedException();
+        togglesMision[mision.indiceMision].TextoMision.text = mision.ordenInicial;
+
+        if (mision.tieneRepeticion)
+        {
+            togglesMision[mision.indiceMision].TextoMision.text += "(" + mision.repeticionActual + "/" + mision.totalRepeticiones + ")";
+
+        }
+
+        togglesMision[mision.indiceMision].gameObject.SetActive(true);
     }
+
+
 
     //private void EncenderToggleMision(MisionSO mision)
     //{

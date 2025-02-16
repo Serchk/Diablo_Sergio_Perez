@@ -1,20 +1,18 @@
-using DG.Tweening;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC : MonoBehaviour, IInteractuable
+public class Seta : MonoBehaviour, IInteractuable
 {
     private Outline outline;
+
+    [SerializeField] private MisionSo mision;
+    [SerializeField] private EventManagerSO eventManager;
+
     [SerializeField] private Texture2D iconoInteracción;
     [SerializeField] private Texture2D iconoPorDefecto;
-
-    [SerializeField] private DialogaSO miDialogo;
-    [SerializeField] private float duracionRotacion;
-    [SerializeField] private Transform cameraNPC;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()    
     {
         outline = GetComponent<Outline>();
     }
@@ -22,13 +20,8 @@ public class NPC : MonoBehaviour, IInteractuable
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    private void IniciarInteraccion()
-    {
-        SistemaDialogo.sD.IniciarDialogo(miDialogo, cameraNPC);
-    }
 
+    }
     private void OnMouseEnter()
     {
         Cursor.SetCursor(iconoInteracción, Vector2.zero, CursorMode.Auto);
@@ -40,8 +33,16 @@ public class NPC : MonoBehaviour, IInteractuable
         outline.enabled = false;
     }
 
-    void IInteractuable.Interactuar(Transform interactuador)
+    public void Interactuar(Transform interactor)
     {
-        transform.DOLookAt(interactuador.position, duracionRotacion, AxisConstraint.Y).OnComplete(IniciarInteraccion);
+        if(mision.repeticionActual < mision.totalRepeticiones)
+        {
+            eventManager.ActualizarMision(mision);
+        }
+        else
+        {
+            eventManager.TerminarMision(mision);
+        }
+        Destroy(gameObject);
     }
 }

@@ -28416,8 +28416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventManager: {fileID: 0}
-  togglesMision:
-  - {fileID: 1268172999422803752}
+  togglesMision: []
 --- !u!1001 &1787104883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37566,18 +37565,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77b51ae3ba6e45545a60f6a45cb751eb, type: 3}
---- !u!114 &1268172999422803752 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7991131594822999852, guid: 77b51ae3ba6e45545a60f6a45cb751eb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1268172999422803751}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60bd316bee9a34342bf13187934f2062, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1273317007601297109
 Transform:
   m_ObjectHideFlags: 0
