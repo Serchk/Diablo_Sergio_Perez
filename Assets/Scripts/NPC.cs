@@ -30,7 +30,7 @@ public class NPC : MonoBehaviour, IInteractuable
     }
     private void IniciarInteraccion()
     {
-        SistemaDialogo.sistema.IniciarDialogo(miDialogo, cameraNPC);
+        SistemaDialogo.sD.IniciarDialogo(miDialogo, cameraNPC);
     }
 
     private void OnMouseEnter()

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Dialogo1
   m_EditorClassIdentifier: 
   frase:
-  - "\xA1Hola, aventurero! Te esperan grandes aventuras, aventurero."
-  - "Necesito que me hagas un encargo, porque mi abuelita est\xE1 malita."
-  - Necesito que me busques unas hierbitas, para que se encuentre mejor.
+  - "\xA1Hola, aventurero! Supongo que est\xE1s en busca del tesoro. "
+  - "Si me ayudas a encontrar unas setas que se me han escapado, que necesito para
+    mi receta, te dar\xE9 una de la llaves necesaria para abrir el cofre el tesoro."
+  - "La otra llave la obtendr\xE1s si eres capaz de vencer al monstruo."
   tiempoEntreLetras: 0.02

@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class SistemaMisiones : MonoBehaviour
 {
-    //[SerializeField]
-    //private EventManagerSO eventManager;
+    [SerializeField]
+    private EventManagerSO eventManager;
 
-    //[SerializeField]
-    //private ToggleMision[] togglesMision; //coleccion de togles
+    [SerializeField]
+    private ToggleMision[] togglesMision; //coleccion de togles
 
 
-    //private void OnEnable()
-    //{
-    //    //me suscribo al evento y lo vinculo con el metodo.
-    //    eventManager.OnNuevaMision += EncenderToggleMision;
-    //    eventManager.OnActualizarMision += ActualizarToggleMision;
-    //    eventManager.OnTerminarMision += TerminarToggleMision;
-    //}
+    private void OnEnable()
+    {
+        //me suscribo al evento y lo vinculo con el metodo.
+        eventManager.OnNuevaMision += EncenderToggleMision;
+        //eventManager.OnActualizarMision += ActualizarToggleMision;
+        //eventManager.OnTerminarMision += TerminarToggleMision;
+    }
 
-    
+    private void EncenderToggleMision()
+    {
+        throw new System.NotImplementedException();
+    }
 
     //private void EncenderToggleMision(MisionSO mision)
     //{
@@ -29,7 +32,7 @@ public class SistemaMisiones : MonoBehaviour
     //    //Y si tiene repeticion...
     //    if (mision.tieneRepeticion)
     //    {
-    //       togglesMision[mision.indiceMision].TextoMision.text += "(" + mision.repeticionActual + "/" + mision.totalRepeticiones + ")";
+    //        togglesMision[mision.indiceMision].TextoMision.text += "(" + mision.repeticionActual + "/" + mision.totalRepeticiones + ")";
 
     //    }
 

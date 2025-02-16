@@ -33,38 +33,28 @@ public class Menu : MonoBehaviour
         {
 
             // Verificar si el objeto tiene un script interactuable como Maceta
-            if (hitInfo.transform.TryGetComponent(out Puerta1 scriptMaceta))
+            if (hitInfo.transform.TryGetComponent(out Puerta1 scriptPuerta))
             {
-                interactuableActual = scriptMaceta.transform;
+                interactuableActual = scriptPuerta.transform;
                 interactuableActual.GetComponent<Outline>().enabled = true;
-                scriptMaceta.MedioAbrir();
+                scriptPuerta.MedioAbrir();
                 if (Input.GetMouseButton(0))
                 {
-                    scriptMaceta.Abrir();
+                    scriptPuerta.Abrir();
                     
                 }
             }
-            else if (hitInfo.transform.TryGetComponent(out Puerta2 scriptMaceta2))
+            else if (hitInfo.transform.TryGetComponent(out Puerta2 scriptPuerta2))
             {
-                interactuableActual = scriptMaceta2.transform;
+                interactuableActual = scriptPuerta2.transform;
                 interactuableActual.GetComponent<Outline>().enabled = true;
-                scriptMaceta2.MedioAbrir();
+                scriptPuerta2.MedioAbrir();
                 if (Input.GetMouseButton(0))
                 {
-                    scriptMaceta2.Abrir();
+                    scriptPuerta2.Abrir();
                 }
             }
-            //else if (hitInfo.transform.TryGetComponent(out Maceta3 scriptMaceta3))
-            //{
-            //    interactuableActual = scriptMaceta3.transform;
-            //    interactuableActual.GetComponent<Outline>().enabled = true;
-            //    scriptMaceta3.PlantarFlor();
-            //    if (Input.GetMouseButton(0))
-            //    {
-            //        SceneManager.LoadScene(2);
-            //    }
-            //}
-
+            
             else if (interactuableActual != null)
             {
                 //scriptAbsFlor.AbsorberFlor();

@@ -9,6 +9,9 @@ public class Player : MonoBehaviour
     private NavMeshAgent agent;
     private Camera cam;
     private Transform  ultimoClick;
+
+    [SerializeField] GameObject canvasPausa;
+    [SerializeField] GameObject canvasMapa;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CanvasPausa();
         if (Time.timeScale == 1)
         {
             Movimiento();            
@@ -73,5 +77,25 @@ public class Player : MonoBehaviour
     public void HacerDanho(float danhoAtaque)
     {
         Debug.Log("Me hacen pupa: " + danhoAtaque);
+    }
+    private void CanvasPausa()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            canvasPausa.SetActive(!canvasPausa.activeSelf);
+            if (canvasPausa.activeSelf)
+            {
+                Time.timeScale = 0.2f;
+                Cursor.lockState = CursorLockMode.None;
+                canvasMapa.SetActive(false);
+            }
+            else
+            {
+                Time.timeScale = 1;
+                Cursor.lockState = CursorLockMode.Locked;
+                canvasMapa.SetActive(true);
+            }
+        }
+
     }
 }

@@ -9,7 +9,9 @@ public class SistemaDialogo : MonoBehaviour
        //1. Sólo existe una única instancia de SistemaDialogo.
        //2. Es accesible desde cualquier punto del programa.
 
-    public static SistemaDialogo sistema;
+    public static SistemaDialogo sD;
+
+    [SerializeField] private EventManagerSO eventManager;
 
     [SerializeField] private GameObject marcoDialogo;
 
@@ -27,10 +29,10 @@ public class SistemaDialogo : MonoBehaviour
     void Awake()
     {
         //Si el trono está libre...
-        if (sistema == null)
+        if (sD == null)
         {
             //Me hago con el trono, y entonces SistemaDialogo SOY YO (this).
-            sistema = this;
+            sD = this;
         }
         else
         {
@@ -92,6 +94,12 @@ public class SistemaDialogo : MonoBehaviour
         marcoDialogo.SetActive(false);
         indiceFraseActual = 0;
         escribiendo = false;
+
+        if (dialogoActual.tieneMision)
+        {
+            eventManager.NuevaMision(dialogoActual.mision);
+        }
+
         dialogoActual = null;
         Time.timeScale = 1;
     }
