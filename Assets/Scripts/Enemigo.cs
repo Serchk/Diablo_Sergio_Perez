@@ -8,6 +8,10 @@ public class Enemigo : MonoBehaviour
     private SistemaCombate combate;
     private SistemaPatrulla patrulla;
 
+    private Outline outline;
+    [SerializeField] private Texture2D iconoInteracción;
+    [SerializeField] private Texture2D iconoPorDefecto;
+
     private Transform target;
     public SistemaCombate Combate { get => combate; set => combate = value; }
     public SistemaPatrulla Patrulla { get => patrulla; set => patrulla = value; }
@@ -30,6 +34,7 @@ public class Enemigo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        outline = GetComponent<Outline>();
         patrulla.enabled = true;
     }
 
@@ -37,5 +42,15 @@ public class Enemigo : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnMouseEnter()
+    {
+        Cursor.SetCursor(iconoInteracción, Vector2.zero, CursorMode.Auto);
+        outline.enabled = true;
+    }
+    private void OnMouseExit()
+    {
+        Cursor.SetCursor(iconoPorDefecto, Vector2.zero, CursorMode.Auto);
+        outline.enabled = false;
     }
 }
