@@ -18,3 +18,5 @@ MonoBehaviour:
     mi receta, te dar\xE9 una de la llaves necesaria para abrir el cofre el tesoro."
   - "La otra llave la obtendr\xE1s si eres capaz de vencer al monstruo."
   tiempoEntreLetras: 0.02
+  tieneMision: 1
+  mision: {fileID: 11400000, guid: c63b8d155483a0e4f881ecd4fa1ac7d7, type: 2}
