@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 public class Seta : MonoBehaviour, IInteractuable
@@ -35,12 +36,16 @@ public class Seta : MonoBehaviour, IInteractuable
 
     public void Interactuar(Transform interactor)
     {
-        if(mision.repeticionActual < mision.totalRepeticiones)
+        mision.repeticionActual++;
+        Debug.Log("Sumando...");
+        if (mision.repeticionActual <= mision.totalRepeticiones)
         {
+            Debug.Log("Actualizando...");
             eventManager.ActualizarMision(mision);
         }
-        else
+        else 
         {
+            Debug.Log("fin mision...");
             eventManager.TerminarMision(mision);
         }
         Destroy(gameObject);
