@@ -37,6 +37,7 @@ public class NPC : MonoBehaviour, IInteractuable
     {
         if(miMision == misionTerminada)
         {
+            Debug.Log("camnaindo dialogo");
             dialogoActual = miDialogo2;
         }
     }
