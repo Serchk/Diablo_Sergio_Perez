@@ -10,9 +10,37 @@ public class NPC : MonoBehaviour, IInteractuable
     [SerializeField] private Texture2D iconoInteracción;
     [SerializeField] private Texture2D iconoPorDefecto;
 
-    [SerializeField] private DialogaSO miDialogo;
+    [SerializeField] EventManagerSO eventManager;
+
+    [SerializeField] MisionSo miMision;
+
+    [SerializeField] private DialogaSO miDialogo1;
+
+    [SerializeField] private DialogaSO miDialogo2;
+
     [SerializeField] private float duracionRotacion;
     [SerializeField] private Transform cameraNPC;
+
+    private DialogaSO dialogoActual;
+
+    private void Awake()
+    {
+        dialogoActual = miDialogo1;
+
+    }
+    private void OnEnable()
+    {
+        eventManager.OnTerminarMision += CambiarDialogo;
+    }
+
+    private void CambiarDialogo(MisionSo misionTerminada)
+    {
+        if(miMision == misionTerminada)
+        {
+            dialogoActual = miDialogo2;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +58,7 @@ public class NPC : MonoBehaviour, IInteractuable
     }
     private void IniciarInteraccion()
     {
-        SistemaDialogo.sD.IniciarDialogo(miDialogo, cameraNPC);
+        SistemaDialogo.sD.IniciarDialogo(dialogoActual, cameraNPC);
     }
 
     private void OnMouseEnter()
@@ -43,6 +71,9 @@ public class NPC : MonoBehaviour, IInteractuable
         Cursor.SetCursor(iconoPorDefecto, Vector2.zero, CursorMode.Auto);
         outline.enabled = false;
     }
+    private void OnDisable()
+    {
+        eventManager.OnTerminarMision -= CambiarDialogo;
+    }
 
-   
 }

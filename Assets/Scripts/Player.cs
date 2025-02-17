@@ -57,13 +57,13 @@ public class Player : MonoBehaviour
     //}
     private void ComprobarInteraccon()
     {
-        if (ultimoClick != null && ultimoClick.TryGetComponent(out NPC npc))
+        if (ultimoClick != null && ultimoClick.TryGetComponent(out IInteractuable interactable))
         {
             agent.stoppingDistance = 2;
 
             if(!agent.pathPending && agent.remainingDistance <agent.stoppingDistance)
             {
-                npc.Interactuar(transform);
+                interactable.Interactuar(transform);
 
                 ultimoClick = null;
             }

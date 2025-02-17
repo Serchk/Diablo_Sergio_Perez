@@ -36838,7 +36838,6 @@ GameObject:
   m_Component:
   - component: {fileID: 543450651623019404}
   - component: {fileID: 919132147883804987}
-  - component: {fileID: 919132147883804983}
   - component: {fileID: 919132147883804984}
   - component: {fileID: 919132147883804985}
   - component: {fileID: 919132147883804986}
@@ -36849,21 +36848,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &919132147883804983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132147883804982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72284d4aeca57ca45ad3432843429a47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  "iconoInteracci\xF3n": {fileID: 2800000, guid: 42ec8a0e710138343a271d732299cfb6,
-    type: 3}
-  iconoPorDefecto: {fileID: 2800000, guid: 51cb6ee928f89b64691ef4dfd57c03e9, type: 3}
 --- !u!136 &919132147883804984
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -36938,10 +36922,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7452de040d95d0f43aa48ae31901ad93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mision: {fileID: 0}
-  eventManager: {fileID: 0}
-  "iconoInteracci\xF3n": {fileID: 0}
-  iconoPorDefecto: {fileID: 0}
+  mision: {fileID: 11400000, guid: c63b8d155483a0e4f881ecd4fa1ac7d7, type: 2}
+  eventManager: {fileID: 11400000, guid: 862810773d536fb41a499ca2d24dd53d, type: 2}
+  "iconoInteracci\xF3n": {fileID: 2800000, guid: 42ec8a0e710138343a271d732299cfb6,
+    type: 3}
+  iconoPorDefecto: {fileID: 2800000, guid: 51cb6ee928f89b64691ef4dfd57c03e9, type: 3}
 --- !u!1 &919132147923182178
 GameObject:
   m_ObjectHideFlags: 0
@@ -36952,7 +36937,6 @@ GameObject:
   m_Component:
   - component: {fileID: 543450651576383704}
   - component: {fileID: 919132147923182183}
-  - component: {fileID: 919132147923182179}
   - component: {fileID: 919132147923182180}
   - component: {fileID: 919132147923182181}
   - component: {fileID: 919132147923182182}
@@ -36963,21 +36947,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &919132147923182179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132147923182178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72284d4aeca57ca45ad3432843429a47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  "iconoInteracci\xF3n": {fileID: 2800000, guid: 42ec8a0e710138343a271d732299cfb6,
-    type: 3}
-  iconoPorDefecto: {fileID: 2800000, guid: 51cb6ee928f89b64691ef4dfd57c03e9, type: 3}
 --- !u!136 &919132147923182180
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -37052,10 +37021,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7452de040d95d0f43aa48ae31901ad93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mision: {fileID: 0}
-  eventManager: {fileID: 0}
-  "iconoInteracci\xF3n": {fileID: 0}
-  iconoPorDefecto: {fileID: 0}
+  mision: {fileID: 11400000, guid: c63b8d155483a0e4f881ecd4fa1ac7d7, type: 2}
+  eventManager: {fileID: 11400000, guid: 862810773d536fb41a499ca2d24dd53d, type: 2}
+  "iconoInteracci\xF3n": {fileID: 2800000, guid: 42ec8a0e710138343a271d732299cfb6,
+    type: 3}
+  iconoPorDefecto: {fileID: 2800000, guid: 51cb6ee928f89b64691ef4dfd57c03e9, type: 3}
 --- !u!1 &919132147954312776
 GameObject:
   m_ObjectHideFlags: 0
