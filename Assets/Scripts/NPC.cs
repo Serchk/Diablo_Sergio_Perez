@@ -21,7 +21,7 @@ public class NPC : MonoBehaviour, IInteractuable
     [SerializeField] private float duracionRotacion;
     [SerializeField] private Transform cameraNPC;
 
-    private DialogaSO dialogoActual;
+    [SerializeField] private DialogaSO dialogoActual;
 
     private void Awake()
     {
@@ -32,6 +32,8 @@ public class NPC : MonoBehaviour, IInteractuable
     {
         eventManager.OnTerminarMision += CambiarDialogo;
     }
+
+    
 
     private void CambiarDialogo(MisionSo misionTerminada)
     {

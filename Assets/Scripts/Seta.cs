@@ -38,7 +38,7 @@ public class Seta : MonoBehaviour, IInteractuable
     {
         mision.repeticionActual++;
         Debug.Log("Sumando...");
-        if (mision.repeticionActual <= mision.totalRepeticiones)
+        if (mision.repeticionActual < mision.totalRepeticiones)
         {
             Debug.Log("Actualizando...");
             eventManager.ActualizarMision(mision);

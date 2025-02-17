@@ -13,11 +13,11 @@ public class EventManagerSO : ScriptableObject
     {
         OnNuevaMision?.Invoke(mision);
     }
-    internal void ActualizarMision(MisionSo mision)
+    public void ActualizarMision(MisionSo mision)
     {
         OnActualizarMision?.Invoke(mision);
     }
-    internal void TerminarMision(MisionSo mision)
+    public void TerminarMision(MisionSo mision)
     {
         OnTerminarMision?.Invoke(mision);
     }
