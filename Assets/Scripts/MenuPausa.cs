@@ -7,14 +7,11 @@ public class MenuPausa : MonoBehaviour
 {
     void Start()
     {
-        //canvasPausa = GetComponent<Canvas>();
+        
     }
     void Update()
     {
-        //if (Input.GetKeyDown(Escape))
-        //{
-        //    //canva
-        //}
+        
     }
     public void ReiniciarNivel()
     {
